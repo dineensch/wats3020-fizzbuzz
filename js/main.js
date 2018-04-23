@@ -6,7 +6,7 @@ let isInteger,
     fbText;
 
 
-//Prompt user to input a number 
+//Prompt user to input a number
 
 isInteger = false;
 
