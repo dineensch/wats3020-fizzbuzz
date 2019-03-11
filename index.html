@@ -6,7 +6,7 @@
 
   <title>WATS 3020: FizzBuzz</title>
   <meta name="description" content="WATS 3020 FizzBuzz Assignment">
-  <meta name="author" content="Jane Student">
+  <meta name="author" content="Dineen">
 
   <link rel="stylesheet" href="css/main.css">
 
@@ -15,7 +15,10 @@
 
 <body>
   <h1>Welcome to FizzBuzz!</h1>
-  <p>Generating results for numbers up to: <span id="max-number">0</span>.</p>
+  <form>  
+    Is this number divisible by 3 or 5:<input type="text" id="max-number"><br>
+    <button onclick="add(document.getElementById('max-number').value)">Calculate!</button>
+  </form>
   <pre id="output">
     <!-- FizzBuzz results go here. -->
   </pre>

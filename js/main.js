@@ -5,41 +5,63 @@ let isInteger,
     fbResults,
     fbText;
 
+isInteger = false;
 
-// TODO: Initialize a variable `isInteger` to use as a control value for the
-// `while` loop. Set the initial value to `false`.
+while (!isInteger) {
+    let input = maxNumber;
+    if (input === null) break;
+    if (input.indexOf('.') < 0) {
+        maxNumber = Number.parseInt(input);
+        isInteger = Number.isSafeInteger(maxNumber) && maxNumber > 0;
+    } else {
+        window.alert('Please enter an whole number (no decimals)!');
+    }
+}
 
-// TODO: Create a `while` loop so user will be prompted to enter a number until
-// they enter a good number. This loop should be controlled by a conditional
-// expression that looks at the value of `isSafeInteger`. When `isSafeInteger`
-// becomes `true`, the `while` loop should stop looping.
+fbResults = [];
 
-// TODO: Inside `while` loop prompt the user for the `maxNumber` value.
+// Option 1
+// if the number (i) divided by 3 & 5 with no remainder, push the string 'FizzBuzz' to the index
+// if the number (i) divided by 3 has no remainder, push the string 'fizz' to the index
+// Otherwise, if the number (i) divided by 5 has no remainder, push the string ‘buzz’ to the corresponding index position in the array.
+// Finally, if none of these conditions are true, just push the number (i) to the array
+for (let i = 0; fbResults.length < 100; i++) {
+    let outputString = '';
 
-// TODO: Inside the `while` loop, use a conditional to verify if the `maxNumber`
-// is a suitable integer. (It should be an integer greater than zero.)
+    if (i % 3 === 0 && i % 5 === 0) {
+        outputString += 'FizzBuzz'
+    } else if (i % 3 === 0) {
+        outputString += 'Fizz'
+    } else if (i % 5 === 0) {
+        outputString += 'Buzz'
+    } else {
+        outputString = i;
+    }
+    fbResults.push(outputString);
+}
 
-// TODO: If the value of `maxNumber` is suitable, then change the value of
-// `isInteger` so the `while` loop stops looping.
-
-// TODO: Initialize the `fbResults` variable to an empty Array
-
-// TODO: Create a `for` loop that will execute the `maxNumber` of times.
-
-// TODO: Create logic inside the `for` loop to calculate FizzBuzz.  This will
-// require the use of several conditional statements that use the `%` operator.
-// Store the results of this logic in an array called `fbResults`.
-
-// TODO: In preparation for creating the output text for your FizzBuzz results,
-// initialize the `fbText` variable to an empty string.
-
-// TODO: Use a `for ... of` loop to concatenate the values from `fbResults`
-// into the variable `fbText`.
+// Option 2
+// for (let i = 0; i < 100;) {
+//     let outputString = '';
+//     if (i % 3 === 0) {
+//         outputString += "fizz"
+//     }
+//     if (i % 5 === 0) {
+//         outputString += "buzz";
+//     }
+//     if (outputString.length === 0) {
+//         outputString = i;
+//     }
+//     fbResults.push(outputString);
+// }
 
 
-///////////////////////////////////////////////////////////////////////
-// Do not edit below this line unless you are doing something fancy!
-//////////////////////////////////////////////////////////////////////
+fbText = '';
+
+for (let value of fbResults) {
+    fbText += value + '\n';
+}
+
 let numDisplay = document.querySelector("#max-number");
 numDisplay.innerHTML = maxNumber;
 let output = document.querySelector("#output");
