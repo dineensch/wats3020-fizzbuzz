@@ -24,7 +24,8 @@ In order to successfully complete this project, you must accomplish the followin
 
 * Take input from the user to determine the max number for your FizzBuzz calculation.
 * Use a `while` loop to facilitate re-prompting the user for a number in case they do not enter a suitable number.
-* Validate using `Number.isSafeInteger()` that the input from the user is a suitable number. (If not, re-prompt them to enter a new number.)
+* Validate using [Number.isSafeInteger()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger) that the input from the user is a suitable number. (If not, re-prompt them to enter a new number.)
+* Review the [remainder operator: %](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()) as it's important in solving Fizz Buzz as well as many other interview question problems (and real life problems too like identifying even numbers in rows of data)
 * Create code that makes proper use of conditionals to determine FizzBuzz calculations.
 * Generate an array of FizzBuzz calculations using a `for` loop.
 * Output your FizzBuzz calculations using a `for ... of` loop.
@@ -56,6 +57,7 @@ Buzz
 
 ## Stretch Goals
 
-* Improve the conditionals that check the validity of the `maxNum` supplied by the user. Try to implement better messaging (perhaps using `alert()` commands) to let the user know what went wrong and how to correct the problem if they submit bad data.
+* This code is a good introduction to writing [algorithms](https://en.wikipedia.org/wiki/Algorithm).  The first step in optimizing this algorithm is to determine the order in which order you test for divisibility by 3, 5 or 15. Write your logical tests in the optimimum order.
+* Improve the conditionals that check the validity of the `maxNum` supplied by the user. Try to implement better messaging (perhaps using [alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) commands) to let the user know what went wrong and how to correct the problem if they submit bad data.
 * There are many ways to tighten this code. You can combine functions, initialize values in different ways, or enhance the algorithm to be more compact. Try to enhance the code in some way to make it fewer lines. (Note: This might result in a trade-off between easy readability and more tightly compacted code. Consider how you feel about that trade-off.)
 * This code could also be enhanced by breaking it out into re-usable functions, etc. Enhance the code by organizing it into more generic, re-usable components.
